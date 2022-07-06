@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.scss";
+import Loader from "./Components/Loader";
+import MainLayout from "./Layouts/MainLayout";
+
+//MainPages
+const MainIndexPage = React.lazy(() => import("./Pages/MainIndexPage"));
+const MainLoginPage = React.lazy(() => import("./Pages/MainLoginPage"));
+const MainChatPage = React.lazy(() => import("./Pages/MainChatPage"))
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route
+          index
+          element={
+            <React.Suspense fallback={<Loader />}>
+              <MainIndexPage />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="chat"
+          element={
+            <React.Suspense fallback={<Loader />}>
+              <MainChatPage />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="login"
+          element={
+            <React.Suspense fallback={<Loader />}>
+              <MainLoginPage />
+            </React.Suspense>
+          }
+        />
+      </Route>
+    </Routes>
   );
 }
 
