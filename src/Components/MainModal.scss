@@ -1,0 +1,145 @@
+.MainModal {
+  background-color: #fff;
+  width: 700px;
+  height: 730px; 
+  box-shadow: 9px 13px 23px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.MainModal__Slider {
+  & img {
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+
+.MainModal__Wrapper {
+  padding: 2rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.MainModal__Info{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.MainModal__MainInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.MainModal__Left {
+  & p {
+    font-family: "Roboto", sans-serif;
+    &:first-child {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  & span {
+    display: flex;
+    align-items: center;
+    margin: .5rem 0;
+    & p{
+      font-family: "Roboto", sans-serif;
+      font-size: 24px;
+      margin-right: .5rem;
+    }
+  }
+}
+.MainModal__Coordinates {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: underline;
+  color: var(--color-1);
+  & svg {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.MainModal__Right {
+  display: flex;
+  flex-direction: column;
+  & p{
+    align-self: flex-end;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  & span {
+    align-self: flex-end;
+    &:first-child {
+      flex-grow: 1;
+      & svg {
+        font-size: 2rem;
+        color: var(--color-2);
+      }
+    }
+    &:last-child {
+      display: flex;
+      align-items: center;
+      & svg{
+        font-size: 1.5rem;
+        color: var(--color-4);
+      }
+      & p{
+        margin-left: .5rem;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.MainModal__Description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  & p {
+    &:first-child {
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    &:last-child {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      box-sizing: border-box;
+      flex-grow: 1;
+    }
+  }
+}
+
+.MainModal__Buttons {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  & button {
+    width: 275px;
+    height: 85px;
+    border-radius: 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--color-1);
+    &:first-child {
+      background-color: var(--color-2);
+    }
+  }
+}

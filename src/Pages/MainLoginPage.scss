@@ -1,12 +1,25 @@
 .MainLoginPage {
   box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.08);
   width: 540px;
-  height: 640px;
   border-radius: 10px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  @media (max-width: 550px) {
+    & {
+      width: 100%;
+    }
+  }
+  @media (max-height: 900px) {
+    & {
+      position: relative;
+      transform: unset;
+      top: unset;
+      left: unset;
+      margin: 0 auto;
+    }
+  }
 }
 
 .MainLoginPage__Wrapper {
@@ -16,9 +29,35 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  transition: .3s padding;
   & h1 {
     font-size: 6rem;
     margin: 2rem 0;
+    transition: .3s;
+  }
+
+  & h2 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    transition: .3s;
+  }
+  @media (max-width: 320px) {
+    & h1{
+      font-size: 4rem;
+      transition: .3s;
+    }
+    & h2{
+      font-size: 2rem;
+    }
+    &{
+      padding: 1.5rem;
+      transition: .3s padding;
+    }
+  }
+  @media (max-width: 440px) {
+    & h2{
+      font-size: 2rem;
+    }
   }
 
   & button {
@@ -46,15 +85,15 @@
 .MainLoginPage__Label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   & span {
     font-family: inherit;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
   }
 
   & input {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #adadad;
@@ -66,10 +105,26 @@
     &:focus-visible {
       outline: unset;
     }
+    &::placeholder{
+      font-family: "Poppins", sans-serif;
+    }
+    @media (max-width: 320px) {
+      & {
+        padding: 1rem;
+      }
+    }
+  }
+  &input[type="date" i]{
+    font-family: "Poppins", sans-serif;
   }
   & a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     align-self: flex-end;
   }
+}
+
+.MainLoginPage__labelFlexContainer{
+  display: flex;
+  justify-content: space-between;
 }

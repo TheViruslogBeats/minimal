@@ -14,7 +14,6 @@ const MainLoginPage = (props: Props) => {
           <NavLink to="registration">Регистрация</NavLink>
         </div>
         <h1>Вход</h1>
-
         <label className="MainLoginPage__Label">
           <span>Введите ваш email</span>
           <input type="email" />

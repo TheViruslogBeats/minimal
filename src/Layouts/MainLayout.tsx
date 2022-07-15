@@ -6,13 +6,15 @@ import { useLocation } from "react-router-dom";
 
 type Props = {};
 
+const hideTopbar: string[] = ["/login", "/register"]
+
 const MainLayout = (props: Props) => {
   const navigate = useLocation()
   console.log(navigate);
   
   return (
     <div className="App">
-      {navigate.pathname === "/login" ? null : <MainTopBar />}
+      {hideTopbar.includes(navigate.pathname) ? null : <MainTopBar />}
       <Outlet />
     </div>
   );

@@ -7,7 +7,9 @@ import MainLayout from "./Layouts/MainLayout";
 //MainPages
 const MainIndexPage = React.lazy(() => import("./Pages/MainIndexPage"));
 const MainLoginPage = React.lazy(() => import("./Pages/MainLoginPage"));
-const MainChatPage = React.lazy(() => import("./Pages/MainChatPage"))
+const MainChatPage = React.lazy(() => import("./Pages/MainChatPage"));
+const MainRegisterPage = React.lazy(() => import("./Pages/MainRegisterPage"));
+const MainDraggablePage = React.lazy(() => import("./Pages/MainDraggablePage"));
 
 function App() {
   return (
@@ -34,6 +36,22 @@ function App() {
           element={
             <React.Suspense fallback={<Loader />}>
               <MainLoginPage />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="register"
+          element={
+            <React.Suspense fallback={<Loader />}>
+              <MainRegisterPage />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="draggable"
+          element={
+            <React.Suspense fallback={<Loader />}>
+              <MainDraggablePage />
             </React.Suspense>
           }
         />

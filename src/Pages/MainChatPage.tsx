@@ -8,9 +8,11 @@ const MainChatPage = (props: Props) => {
     <div className="MainChatPage">
       <div className="MainChatPage__AllChats">
         <label>Чаты</label>
-        <div className="MainChatPage_Chats">
-          
-        </div>
+        <ul className="MainChatPage_Chats">
+          <li>
+            
+          </li>
+        </ul>
       </div>
       <div className="MainChatPage__MainChat"></div>
     </div>
