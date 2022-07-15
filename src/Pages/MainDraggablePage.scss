@@ -21,17 +21,22 @@
   padding: 1rem;
   position: absolute;
   box-sizing: border-box;
+  overflow: hidden;
   top: 100%;
   width: 100%;
   height: 390px;
 }
-
+.MainDraggablePage__Draggable2{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 .MainDraggablePage__DragStick{
-  width: 54px;
-  height: 2px;
+  padding: 1px 27px;
   border-radius: 100px;
   background: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
+  font-size: 1px;
 }
 
 .pa-2{
