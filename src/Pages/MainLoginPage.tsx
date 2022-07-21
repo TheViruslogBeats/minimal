@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import MainTopBarLeft from "../Layouts/Components/MainTopBarLeft";
 import "./MainLoginPage.scss";
 
+
 type Props = {};
 
 const MainLoginPage = (props: Props) => {

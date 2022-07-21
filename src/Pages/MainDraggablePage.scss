@@ -1,44 +1,146 @@
 .MainDraggablePage {
-  background-color: blue;
-  width: 100vw;
-  box-sizing: border-box;
-  position: absolute;
-  transform: translate(-0%, -100%);
-  top: 100%;
-  height: 390px;
-  border-radius: 16px 16px 0px 0px;
-  overflow: hidden;
-}
-.MainDraggablePage__Overflow {
   width: 100%;
+  height: 390px;
+  // background-color: aqua;
+  top: 100%;
+  background: #ffffff;
+  position: absolute;
+  transform: translate(0%, -100%);
   box-sizing: border-box;
-  height: 690px;
+  // display: flex;
+  overflow:auto;
+  padding: 1.5rem;
+  box-shadow: -10px 4px 20px rgba(48, 48, 48, 0.1);
+  border-radius: 16px 16px 0px 0px;
 }
 
-.MainDraggablePage__Draggable {
-  background-color: aquamarine;
-  border-radius: 16px 16px 0px 0px;
-  padding: 1rem;
-  position: absolute;
-  box-sizing: border-box;
-  overflow: hidden;
-  top: 100%;
+.MainDraggablePage__First {
   width: 100%;
-  height: 390px;
+  height: 95%;
+  margin-top: 1rem;
+  display: flex;
+  // display: none;
+  flex-direction: column;
+  & h2 {
+    margin-bottom: 2rem;
+  }
+  & h4 {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    color: #9d9d9d;
+  }
+  & input {
+    background-color: unset;
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 1rem;
+    &:focus {
+      border-bottom: 1px solid #4285f4;
+    }
+    &:focus-visible {
+      outline: unset;
+    }
+    &::placeholder {
+      font-family: "DM Sans", sans-serif;
+    }
+  }
+
 }
-.MainDraggablePage__Draggable2{
+
+.MainDraggablePage__Button{
+  flex-grow: 1;
+  background-color: var(--color-1);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.MainDraggablePage__First__FlexContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
-}
-.MainDraggablePage__DragStick{
-  padding: 1px 27px;
-  border-radius: 100px;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
-  font-size: 1px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.pa-2{
-  padding: 1rem 1rem 0.5rem 2rem ;
+.MainDraggablePage__First__Element {
+  display: flex;
+  align-items: center;
+  min-width: 155px;
+  background: #bbdefb;
+  border-radius: 2px;
+  padding: .75rem;
+  margin: .5rem 0;
+  & p {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+  }
 }
+
+.MainDraggablePage__First__Element__SVG {
+  width: 24px;
+  height: 24px;
+  background: #e3f2fd;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+
+.MainDraggablePage__Second {
+  width: 100%;
+  height: 95%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & h2 {
+    margin-bottom: 1.5rem;
+  }
+  & h4 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    color: #9d9d9d;
+  }
+  & input {
+    background-color: unset;
+    border-bottom: 1px solid #ebebeb;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "DM Sans", sans-serif;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 2rem;
+    &:focus {
+      border-bottom: 1px solid #4285f4;
+    }
+    &:focus-visible {
+      outline: unset;
+    }
+    &::placeholder {
+      font-family: "DM Sans", sans-serif;
+    }
+  }
+
+}
+
+.MainDraggablePage__Button2{
+  height: 58px;
+  background-color: var(--color-1);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.MainDraggablePage__Second__Container{}

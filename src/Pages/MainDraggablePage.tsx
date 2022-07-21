@@ -1,24 +1,47 @@
-import React from "react";
-import Draggable from "react-draggable";
 import "./MainDraggablePage.scss";
 
 interface Props {}
 
 const MainDraggablePage = (props: Props) => {
   return (
-    <Draggable
-      axis="y"
-      handle="a"
-      positionOffset={{ x: "-0%", y: "-100%" }}
-      bounds={{ top: 0, bottom: 340 }}
-    >
-      <div className="MainDraggablePage__Draggable">
-        <div className="MainDraggablePage__Draggable2">
-          <a className="MainDraggablePage__DragStick"></a>
+    <div className="MainDraggablePage">
+      <div className="MainDraggablePage__First">
+        <h2>Добавить объект</h2>
+
+        <h4>Ваш комментарий</h4>
+        <input type="text" />
+        <h4>Категория</h4>
+        <div className="MainDraggablePage__First__FlexContainer">
+          <div className="MainDraggablePage__First__Element">
+            <div className="MainDraggablePage__First__Element__SVG"></div>
+            <p>Есть пандус</p>
+          </div>
+          <div className="MainDraggablePage__First__Element">
+            <div className="MainDraggablePage__First__Element__SVG"></div>
+            <p>Есть пандус</p>
+          </div>
+          <div className="MainDraggablePage__First__Element">
+            <div className="MainDraggablePage__First__Element__SVG"></div>
+            <p>Есть пандус</p>
+          </div>
+          <div className="MainDraggablePage__First__Element">
+            <div className="MainDraggablePage__First__Element__SVG"></div>
+            <p>Есть пандус</p>
+          </div>
         </div>
-        <h1>Some</h1>
+        <button className="MainDraggablePage__Button">Поделиться</button>
       </div>
-    </Draggable>
+      <div className="MainDraggablePage__Second">
+        <h2>Добавить объект</h2>
+        <div className="MainDraggablePage__Second__Container">
+          <h4>Откуда</h4>
+          <input type="text" />
+          <h4>Куда</h4>
+          <input type="text" />
+        </div>
+        <button className="MainDraggablePage__Button2">Построить</button>
+      </div>
+    </div>
   );
 };
 
