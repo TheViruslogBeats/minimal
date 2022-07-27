@@ -115,7 +115,7 @@
   width: 58px;
   height: 8px;
   margin: 0 auto;
-  transform: translate(-0%, 50%);
+  transform: translate(-0%, 100%);
   display: flex;
   justify-content: space-between;
 }
@@ -126,7 +126,7 @@
   height: 8px;
   border-radius: 50%;
   background-color: #9d9d9d;
-  transition: 0.3s width, 0.6s border-radius;
+  transition: 0.3s width, 0.1s 0.3s border-radius;
 }
 
 .MainDraggablePage__CurrentPage{
@@ -135,5 +135,5 @@
   height: 8px;
   border-radius: 15px;
   background-color: #9d9d9d;
-  transition: 0.3s width, 0.6s border-radius;
+  transition: 0.3s width, 0.1s border-radius;
 }
